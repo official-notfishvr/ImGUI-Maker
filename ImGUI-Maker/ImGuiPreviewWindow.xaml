@@ -1,0 +1,32 @@
+<Window x:Class="ImGUI_Maker.ImGuiPreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ImGUI Preview" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#2D2D30">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Preview Controls -->
+        <Border Grid.Row="0" Background="#3E3E42" BorderBrush="#555555" BorderThickness="0,0,0,1">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="ImGUI Preview" Foreground="White" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Margin="15,0"/>
+                <TextBlock x:Name="StatusTextBlock" Text="Ready" Foreground="#CCCCCC" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+        
+        <!-- Preview Area -->
+        <Border Grid.Row="1" Background="#1E1E1E" Margin="10">
+            <TextBlock Text="ImGui preview is running in a separate Veldrid window" 
+                       Foreground="#CCCCCC" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"
+                       FontSize="14"/>
+        </Border>
+    </Grid>
+</Window> 
